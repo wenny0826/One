@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/White"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:scaleType="fitXY"
+                    android:id="@+id/music_cover"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:src="@drawable/default_music_cover" />
+                <!--分割线-->
+                <View style="@style/AppLine" />
+                <!--音乐信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="360dp"
+                    android:background="@drawable/shape_hp"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/author_head"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="10dp"
+                                android:src="@drawable/msg_head" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/music_author"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="歌手"
+                                    android:textColor="@color/AppColor" />
+
+                                <TextView
+                                    android:id="@+id/author_dec"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:text="台湾歌手"
+                                    android:textColor="@color/AppTextGaly" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/music_title"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:text="不要告别"
+                            android:textColor="#000"
+                            android:textSize="18sp" />
+                    </LinearLayout>
+
+                    <!--音乐播放-->
+                    <LinearLayout
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/music_play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:src="@drawable/selector_play" />
+
+                        <TextView
+                            android:id="@+id/music_maketime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:textSize="12sp"
+                            android:text="Qct 18.2016"
+                            android:textColor="@color/AppTextGaly" />
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+            <!--音乐故事标题栏-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/musicinfo_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:text="音乐故事" />
+
+                <RadioGroup
+                    android:id="@+id/music_rg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/rb_music_story"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/selector_music_story" />
+
+                    <RadioButton
+                        android:id="@+id/rb_music_lyric"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/selector_music_lyric" />
+
+                    <RadioButton
+                        android:id="@+id/rb_music_about"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/selector_music_about" />
+                </RadioGroup>
+            </LinearLayout>
+
+            <!--分割线-->
+            <View style="@style/AppLine" />
+
+            <!--音乐故事-->
+            <LinearLayout
+                android:id="@+id/music_story"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible" >
+                <TextView
+                    android:id="@+id/music_story_title"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:text="标题"/>
+
+                <TextView
+                    android:id="@+id/music_story_author"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textSize="12sp"
+                    android:textColor="@color/AppColor"
+                    android:text="作者"/>
+                <WebView
+                    android:background="@color/AppBgColor"
+                    android:id="@+id/tv_music_story"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#000"
+                    android:text="内容"/>
+            </LinearLayout>
+            <!--歌词-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/music_lycir"
+                android:visibility="gone" >
+                <TextView
+                    android:textSize="14sp"
+                    android:textColor="#000"
+                    android:id="@+id/tv_music_lyric"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"/>
+            </LinearLayout>
+            <!--音乐信息-->
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/music_about"
+                android:visibility="gone" >
+                <TextView
+                    android:padding="10dp"
+                    android:textColor="#000"
+                    android:textSize="14sp"
+                    android:id="@+id/tv_music_about"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/charge_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="编辑"
+                android:textColor="@color/AppTextGaly"
+                android:textSize="12sp" />
+            <!--分割线-->
+            <View style="@style/AppLine" />
+            <!--评论-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <CheckBox
+                    android:id="@+id/music_praisenum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:textColor="@color/AppTextGaly"
+                    android:drawableLeft="@drawable/selector_laud"
+                    android:gravity="center_vertical"
+                    android:text="1111" />
+
+                <View style="@style/AppLineV" />
+
+                <TextView
+                    android:textColor="@color/AppTextGaly"
+                    android:id="@+id/music_commentnum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/comment_image"
+                    android:gravity="center_vertical"
+                    android:text="1111" />
+
+                <View style="@style/AppLineV" />
+
+                <TextView
+                    android:textColor="@color/AppTextGaly"
+                    android:id="@+id/music_sharenum"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/share_image"
+                    android:gravity="center_vertical"
+                    android:text="1111" />
+
+            </LinearLayout>
+            <include
+                android:id="@+id/music_comment"
+                layout="@layout/layout_comment"/>
+        </LinearLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/loading"
+        layout="@layout/layout_loading"/>
+</FrameLayout>

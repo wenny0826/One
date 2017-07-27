@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/serial_num">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+                <!--作者信息-->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/author_head"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/msg_head" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="作者"
+                        android:textColor="@color/AppColor" />
+
+                    <TextView
+                        android:id="@+id/maketime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="时间"
+                        android:textColor="@color/AppTextGaly" />
+                </LinearLayout>
+            </LinearLayout>
+            <!--标题-->
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textColor="#000"
+                    android:text="特稿之王"/>
+                <ImageView
+                    android:id="@+id/serial_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/serial_list_image"/>
+            </LinearLayout>
+            <WebView
+                android:id="@+id/content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></WebView>
+
+            <TextView
+                android:id="@+id/charge_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="责任编辑"
+                android:textColor="@color/AppTextGaly"
+                android:textSize="12sp" />
+            <!--分割线-->
+            <View style="@style/AppLine" />
+
+            <include
+                android:id="@+id/author_info"
+                layout="@layout/layout_userinfo" />
+            <!--分割线-->
+            <View style="@style/AppLine" />
+
+            <include
+                android:id="@+id/searial_comment"
+                layout="@layout/layout_comment" />
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/serial_num"
+        layout="@layout/layout_num" />
+    <include
+        android:id="@+id/loading"
+        layout="@layout/layout_loading"/>
+</RelativeLayout>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/White"
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/shape_hp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/hp_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/default_hp_image" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/hp_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VOL1477"
+                android:textColor="@color/AppTextGaly" />
+
+            <TextView
+                android:id="@+id/hp_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="right"
+                android:text="作者"
+                android:textColor="@color/AppTextGaly" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/hp_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:minLines="3"
+            android:text="内容"
+            android:textColor="#000"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/hp_makettime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:text="日期"
+            android:textColor="@color/AppTextGaly" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:drawableLeft="@drawable/selector_diary"
+            android:gravity="center_vertical"
+            android:text="小记"
+            android:textColor="@color/AppTextGaly"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/hp_praisenum"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/selector_laud"
+            android:gravity="center_vertical"
+            android:text="1213"
+            android:textColor="@color/AppTextGaly"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/share_image" />
+    </LinearLayout>
+    </LinearLayout>
+    <include
+        android:id="@+id/loading"
+        layout="@layout/layout_loading"/>
+</FrameLayout>

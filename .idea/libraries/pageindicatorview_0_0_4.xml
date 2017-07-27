@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="pageindicatorview-0.0.4">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/88f72916fda85ac35b255197c6e94f09fa7e8ede/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/88f72916fda85ac35b255197c6e94f09fa7e8ede/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.romandanylyk/pageindicatorview/0.0.4/3f03deca603d58da096ab8109d0256fc92cbb8c0/pageindicatorview-0.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

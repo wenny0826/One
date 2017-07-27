@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/iv_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="finishSelf"
+            android:src="@drawable/selector_return" />
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="驴得水"
+            android:textSize="@dimen/titleSize" />
+    </android.support.v7.widget.Toolbar>
+
+    <View style="@style/AppLine"/>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <ScrollView
+        android:background="#fff"
+        android:overScrollMode="never"
+        android:fillViewport="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/iv_cover"
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/movie_placeholder_0" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/selector_movie_ticket" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/selector_plz_grade"
+                    android:drawablePadding="10dp"
+                    android:gravity="center_vertical"
+                    android:text="评分" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/share_image" />
+            </LinearLayout>
+
+            <!--分割线-->
+            <View style="@style/AppLine" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/BgColor"
+                android:padding="15dp"
+                android:text="电影故事"
+                android:textColor="@color/AppTextGaly"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <!--作者信息-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/author_head"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_margin="10dp"
+                        android:src="@drawable/msg_head" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/movie_author"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="作者"
+                            android:textColor="@color/AppColor" />
+
+                        <TextView
+                            android:id="@+id/create_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:text="时间"
+                            android:textColor="@color/AppTextGaly" />
+                    </LinearLayout>
+
+                    <CheckBox
+                        android:drawablePadding="-10dp"
+                        android:button="@null"
+                        android:paddingRight="10dp"
+                        android:id="@+id/praisenum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/selector_laud"
+                        android:gravity="center_vertical"
+                        android:text="1213"
+                        android:textColor="@color/AppTextGaly"
+                        android:textSize="12sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/story_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="tilte" />
+            <WebView
+                android:id="@+id/webView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </WebView>
+            <!--分割线-->
+            <View style="@style/AppLine" />
+            <!--电影信息栏目-->
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:background="@color/BgColor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@color/AppTextGaly"
+                    android:text="一个电影表" />
+
+                <RadioGroup
+                    android:id="@+id/movie_rg"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/rb_gross"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/selector_gross" />
+
+                    <RadioButton
+                        android:id="@+id/rb_still"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/selector_still" />
+                    <RadioButton
+                        android:id="@+id/rb_plot"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:button="@null"
+                        android:drawableLeft="@drawable/selector_plot" />
+                </RadioGroup>
+            </LinearLayout>
+            <!--分割线-->
+            <View style="@style/AppLine" />
+
+            <!--电影表-->
+            <TableLayout
+                android:padding="5dp"
+                android:visibility="visible"
+                android:id="@+id/gross"
+                android:background="@drawable/shape_movie"
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+
+            </TableLayout>
+            <!--剧照-->
+            <HorizontalScrollView
+                android:id="@+id/photos_hsv"
+                android:visibility="gone"
+                android:scrollbars="none"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/photos"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+            </HorizontalScrollView>
+            <!--影片信息-->
+            <TextView
+                android:visibility="gone"
+                android:padding="10dp"
+                android:id="@+id/plot"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <include
+                android:id="@+id/movie_comment"
+                layout="@layout/layout_comment"/>
+        </LinearLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/loading"
+        layout="@layout/layout_loading"/>
+
+    </FrameLayout>
+</LinearLayout>

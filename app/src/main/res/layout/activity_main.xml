@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/White"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/tab_title"
+            layout="@layout/layout_main_title" />
+
+        <View style="@style/AppLine" />
+
+        <FrameLayout
+            android:id="@+id/tab_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View style="@style/AppLine" />
+
+        <include
+            android:id="@+id/tab_bottom"
+            layout="@layout/layout_main_bottom" />
+    </LinearLayout>
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_hp_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/one_hp_guide"/>
+    <!--<ImageView-->
+        <!--android:visibility="gone"-->
+        <!--android:id="@+id/iv_movie_guide"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:src="@drawable/one_movie_guide"/>-->
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_music_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/one_music_guide"/>
+    <ImageView
+        android:visibility="gone"
+        android:id="@+id/iv_read_guide"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/one_reading_guide"/>
+</RelativeLayout>

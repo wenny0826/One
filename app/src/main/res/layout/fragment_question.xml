@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:background="#fff"
+        android:layout_above="@+id/question_num"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_marginTop="10dp"
+                android:id="@+id/question_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="你在就读过的学校有什么校园传说吗？"
+                android:textColor="#000"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/question_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="一个App工作室"
+                android:layout_marginBottom="10dp"
+                android:textColor="#000"/>
+            <!--分割线-->
+            <View
+                style="@style/AppLine"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/answer_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="网友答"
+                    android:textColor="#000"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/question_makettime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Qet 31.2016"
+                    android:textColor="@color/AppTextGaly"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <WebView
+                android:id="@+id/answer_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></WebView>
+
+            <TextView
+                android:id="@+id/charge_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:text="责任编辑"
+                android:textColor="@color/AppTextGaly"
+                android:textSize="12sp" />
+            <!--分割线-->
+            <View style="@style/AppLine" />
+
+            <include
+                android:id="@+id/question_comment"
+                layout="@layout/layout_comment" />
+        </LinearLayout>
+    </ScrollView>
+    <include
+        android:id="@+id/question_num"
+        layout="@layout/layout_num"/>
+    <include
+        android:id="@+id/loading"
+        layout="@layout/layout_loading"/>
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="pinned-section-listview-1.0.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/2dc93f8629f1235af87a6dbd5857d8d7c443bb17/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/2dc93f8629f1235af87a6dbd5857d8d7c443bb17/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/de.halfbit/pinned-section-listview/1.0.0/538fb388d298b36592342528efb336f02e5219c7/pinned-section-listview-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
